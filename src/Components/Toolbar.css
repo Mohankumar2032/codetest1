@@ -1,0 +1,195 @@
+header {
+  display: block;
+}
+
+header .innerHeader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+  height: 137px;
+}
+
+.headerFrame {
+  position: relative;
+  background: #171717;
+  background-position: top;
+  background-size: cover;
+}
+
+.logoSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logoSection {
+  height: 87px;
+  position: relative;
+}
+
+.logo-anchor {
+  height: 100%;
+}
+
+picture.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+img.main-logo {
+  max-height: 31px;
+}
+
+/* Right Side Auth and Search */
+.singInSection {
+  display: flex;
+  height: 100%;
+  justify-content: flex-end;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.signInContainer {
+  display: flex;
+}
+
+.menu-item {
+  border-left: 1px solid white;
+}
+
+.signInContainer > .menu-item:first-child {
+  border-left: none;
+}
+
+.signInContainer .menu-item a {
+  display: flex;
+  padding-left: 15px;
+  padding-right: 15px;
+  color: white;
+}
+
+span.search-active {
+  position: absolute;
+  top: 5px;
+  left: 2;
+  font-size: 16px;
+  right: 5px;
+  color: #c1c1c1;
+}
+
+.innerHeader .singInSection .search-inner-wrapper {
+  width: 115px;
+  height: 32px;
+  margin-left: 20px;
+  position: relative;
+  flex-shrink: 0;
+}
+input.search-input__textbox {
+  width: 115px;
+  border-radius: 2px;
+  outline: none;
+  box-shadow: none;
+  border: none;
+}
+
+input.search-input__textbox {
+  transition: width 0.2s linear;
+  width: 115px;
+  border-radius: 2px;
+  outline: none;
+  box-shadow: none;
+  border: none;
+  padding: 3px 30px 3px 5px;
+}
+
+.search-input__container {
+  position: absolute;
+  right: 0;
+}
+.search-input {
+  display: flex;
+}
+
+input.search-input__textbox.focused {
+  width: 324px;
+}
+
+.text {
+  margin-left: 10px;
+  font-size: 1.125rem;
+  vertical-align: -0.2ex;
+  color: white;
+  font-family: "Titillium";
+  font-weight: 600;
+}
+
+.hideMenuBtn {
+  display: block;
+  transition: all 0.2s ease;
+}
+.showSearchIcon {
+  display: none;
+  color: white;
+  position: absolute;
+  right: 0;
+}
+.sideBarMenu {
+  position: absolute;
+  left: 0;
+}
+
+.menuBtn {
+  color: white !important;
+}
+.headerSection {
+  box-shadow: 5px 10px #888888;
+}
+
+@media (max-width: 800px) {
+  .headerSection,
+  .hideMenuBtn {
+    display: block;
+  }
+  .showSearchIcon {
+    display: block;
+    color: white !important;
+  }
+  .singInSection.hideSignIn {
+    display: none;
+  }
+
+  .searchIcon.hideMenuBtn {
+    position: absolute;
+    right: 0;
+  }
+
+  .drawer.display {
+    display: block;
+    left: 0;
+    transition: all 0.2s ease;
+  }
+
+  .drawer.no-display {
+    left: -300px;
+    transition: all 0.2s ease;
+  }
+  .nav-bar-wrapper {
+    display: none;
+  }
+
+  .searchIcon.hideMenuBtn button {
+    color: white !important;
+  }
+}
+
+@media (max-width: 440px) {
+  .hideText {
+    display: none;
+  }
+}
